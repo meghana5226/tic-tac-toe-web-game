@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe - Enhanced</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="theme-toggle">
+    <button onclick="toggleTheme()">🌓 Toggle Theme</button>
+  </div>
+
+  <div class="container">
+    <h1>Tic Tac Toe</h1>
+
+    <div class="player-inputs">
+      <input type="text" id="playerX" placeholder="Player X Name" />
+      <input type="text" id="playerO" placeholder="Player O Name" />
+      <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div class="scoreboard">
+      <p><span id="playerXName">Player X</span>: <span id="scoreX">0</span></p>
+      <p><span id="playerOName">Player O</span>: <span id="scoreO">0</span></p>
+      <p>Draws: <span id="draws">0</span></p>
+    </div>
+
+    <div id="board" class="board"></div>
+    <h2 id="status"></h2>
+
+    <button onclick="resetGame()">🔄 Restart Game</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

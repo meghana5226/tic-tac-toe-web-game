@@ -1,0 +1,85 @@
+:root {
+    --bg-color: #1e1e2f;
+    --cell-color: #2e2e4f;
+    --text-color: #fff;
+  }
+  
+  body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .player-inputs input {
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background-color: var(--cell-color);
+    border-radius: 12px;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .cell:hover {
+    background-color: #444;
+    transform: scale(1.05);
+  }
+  
+  .winning-cell {
+    background-color: #4caf50 !important;
+    animation: bounce 0.5s alternate infinite;
+  }
+  
+  @keyframes bounce {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: orange;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .dark {
+    --bg-color: #f7f7f7;
+    --cell-color: #dedede;
+    --text-color: #111;
+  }
+  
